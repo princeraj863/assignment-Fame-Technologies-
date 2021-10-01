@@ -92,17 +92,33 @@ module.exports.create = function(req,res){
         if(err){console.log('error in finding user in signing up'); return;}
 
         if(!user){
-            console.log(req.body);
+           // console.log(req.body);
             //User.create(req.params.id,{name:req.body.name,email:req.body.email},
               //  function(err,user)
-          User.create(req.body,function(err,user){
-             // console.log("user",user);
-              if(err){console.log('error in creating user while signing up'); return;}
-              
-              return res.redirect('/users/sign-in');
-          })
-        }
-        else{
+          
+          
+           
+
+          /* we can't  access req.params as now it is multipart/form-data ,body parser won't be able to parse it
+       for it we use multer and function we defined User.uploadedAvatar as multer.diskStorage takes req also*/
+       User.uploadedAvatar(req,res,function(err){
+           if(err){console.log('multer error:',err);}
+           /*user.firstname = req.body.firstname;
+           user.lastname = req.body.lastname;
+           user.phone = req.body.phone
+           user.email= req.body.email;
+           user.password= req.body.password;*/
+           //console.log(req.body);
+           req.body.avatar =  User.AvatarPath + '/' + req.file.filename ;
+           User.create(req.body,function(err,user){
+            // console.log("user",user);
+             if(err){console.log('error in creating user while signing up',err); return;}
+             
+             return res.redirect('/users/sign-in');
+         });
+          
+        });
+    }else{
             console.log("rediect");
             
             return res.redirect('back');

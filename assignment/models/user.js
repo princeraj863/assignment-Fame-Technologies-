@@ -34,7 +34,9 @@ const userSchema = new mongoose.Schema({
     }
    ,
    avatar:{
-     type:String
+     type:String,
+     required: true
+
    }
 },{
     timestamps : true//it keeps the track of when data got created and updated

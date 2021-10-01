@@ -2,9 +2,16 @@
 
 <link rel="stylesheet" href="/css/user_sign_up.css">
 
-<form action="/users/create" method="POST">
+<form action="/users/create" enctype="multipart/form-data" method="POST">
     <!--<input type="text" name="FirstName " placeholder="First Name"  >
     <input type="text" name="LastName" placeholder="Last Name" required > -->
+
+    <div class="signup">
+        <label for="avatar"><b>Photo</b></label>
+        <br>
+      <input type="file" name="avatar" placeholder="Profile Picture" required>
+      </div>
+
     <div class="signup">
     <label for="firstname"><b>First Name</b></label>
     <br>

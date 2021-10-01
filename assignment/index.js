@@ -61,7 +61,7 @@ app.use(session({
    },
   store : new MongoStore(
       {
-        mongoUrl: 'mongodb://localhost/coolzblog12_db',
+        mongoUrl: 'mongodb://localhost/coolzblog13_db',
         autoRemove : 'disabled'//do  you want this to removed automatically
       },
       function(err){ // callback function

@@ -18,7 +18,7 @@
         <!--we can't  access req.params as now it is multipart/form-data
         for it we use multer and function we defined User.uploadedAvatar as multer.diskStorage takes req also-->
         <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
-            <div class="img">
+            <div class="img"></div>
                 <img  src="<%=user.avatar %>" alt="<%= user.name %>" width="100"> 
               </div> 
             <div class="profile">
