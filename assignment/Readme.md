@@ -1,0 +1,1 @@
+All package info is in package.json file.
