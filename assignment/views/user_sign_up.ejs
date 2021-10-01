@@ -1,0 +1,43 @@
+<h1>Sign up</h1>
+
+<link rel="stylesheet" href="/css/user_sign_up.css">
+
+<form action="/users/create" method="POST">
+    <!--<input type="text" name="FirstName " placeholder="First Name"  >
+    <input type="text" name="LastName" placeholder="Last Name" required > -->
+    <div class="signup">
+    <label for="firstname"><b>First Name</b></label>
+    <br>
+    <input  type="text" name="firstname" placeholder="firstname" required  >
+</div>
+<div class="signup">
+    <label for="lastname"><b>Last Name</b></label> 
+    <br>
+    <input   type="text" name="lastname" placeholder="lastname" required  >
+
+</div> 
+<div class="signup"> 
+    <label for="phone"><b>Phone Number</b></label>
+    <br>
+    <input  type="text" name="phone" placeholder="phone" required  > 
+
+</div>
+
+<div class="signup">
+    <label for="email"><b>Email</b></label>
+    <br>
+    <input  type="email" name="email" placeholder="Your Email" required >
+</div>
+<div class="signup">
+    <label for="password"><b>Password</b></label>
+    <br>
+    <input  type="password" name="password" placeholder="password" required  >
+
+</div>
+  <!--  <input type="password" name="password" placeholder="confirmpassword" required  >  -->
+   <!-- <input type="password" name="password" placeholder="Password" required > 
+   <input type="password" name="confirm_password" placeholder="Confirm Password" required > --> 
+   <input class="signup" type="submit" value="Sign Up">
+
+
+</form>

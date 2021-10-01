@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/user_profile.css">
+        <title>
+            <%= title %>
+        </title>
+    </head>
+    <body>
+        <h1> Assignment /  <%= user.firstname %> </h1>
+
+        
+      
+
+
+    <% if(user.id==profile_user.id){ %> <!--here user.id is by passport.js and profile_user.id is from db-->
+
+        <!--if user matches then show the form-->
+        <!--we can't  access req.params as now it is multipart/form-data
+        for it we use multer and function we defined User.uploadedAvatar as multer.diskStorage takes req also-->
+        <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
+            <div class="img">
+                <img  src="<%=user.avatar %>" alt="<%= user.name %>" width="100"> 
+              </div> 
+            <div class="profile">
+                <label for="firstname"><b>First Name</b></label>
+                <br>
+           <input type="text" name="firstname" placeholder="First Name" value="<%=profile_user.firstname %>" required>
+           </div>
+           <div class="profile">
+            <label for="lastname"><b>Last Name</b></label>
+            <br>
+           <input type="text" name="lastname" placeholder="Last Name" value="<%=profile_user.lastname %>" required>
+           </div>
+           <div class="profile">
+            <label for="phone"><b>Phone Number</b></label>
+            <br>
+           <input type="text" name="phone" placeholder="phone" value="<%=profile_user.phone %>" required>
+           </div>
+           <div class="profile">
+            <label for="email"><b>Email</b></label>
+            <br>
+           <input type="email" name="email" placeholder="Your Email" value="<%=profile_user.email %>" required>
+           </div>
+           <div class="profile">
+            <label for="password"><b>Password</b></label>
+            <br>
+           <input type="password" name="password" placeholder="password" value="<%=profile_user.password %>"  required>
+           </div>
+           <div class="profile">
+            <label for="avatar"><b>Photo</b></label>
+            <br>
+          <input type="file" name="avatar" placeholder="Profile Picture">
+          </div>
+
+
+           
+
+           <div class="profile">
+            <button type="submit">Update</button>
+        </div>
+
+
+        </form>
+    <%}else{  %>
+    <!--else show only profile info  -->
+    <p><%= profile_user.firstname %></p>
+    <p><%= profile_user.email %></p>
+
+    <%} %>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<header>
+  <link rel="stylesheet" href="/css/header.css">
+  <div class="navbar">
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="navbar">
+
+      <span class="navbarlogo">
+        
+     
+     <a class="hrefnav" href="/">
+      home
+      </a>
+      </span>
+
+  <span class="navbarlogin">
+  <ul>
+   <% if(locals.user){ %>
+    <li>
+      <!--<a class="a_nav" href="/users/profile/">
+    <%=user.name %> 
+    </a>  -->
+    <a class="hrefnav"  href="/users/profile/<%=user.id %>"><%= user.firstname  %> <%=user.lastname %></a>
+
+    </li>
+    <li>
+        <a class="hrefnav" class="a_nav" href="/users/sign-out">Sign Out </a>
+    </li>
+
+  <% }else{ %>
+    <li>
+        <a class="hrefnav" href="/users/sign-in">Sign In </a>
+    </li>
+
+    <li>
+        <a class="hrefnav" href="/users/sign-up">Sign Up </a>
+    </li>
+
+ <% } %>
+
+
+
+
+  </ul>
+</span>
+</span>
+</header>

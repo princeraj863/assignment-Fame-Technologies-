@@ -1,0 +1,28 @@
+/*span{
+  display: flex;
+  }
+
+
+  .footer {
+    width: 100%;
+    height: 50px;
+    background:grey;
+    color: brown;
+    font-size: 1em;
+    display: flex;
+}
+
+.a_footer{
+	width: 100%;
+    text-align: end;
+	display: flex;
+    padding: 1em;
+    font-weight: bold;
+    flex-direction:row-reverse;
+    padding-right: 20px;
+    
+    text-decoration: none;
+    color: white;
+}
+	
+    */

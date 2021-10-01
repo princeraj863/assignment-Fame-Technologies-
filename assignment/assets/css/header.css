@@ -1,0 +1,34 @@
+span{
+  display: flex;
+  }
+
+
+  .navbar {
+    width: 100%;
+    height: 80px;
+    background: grey;
+    color: brown;
+    font-size: 1em;
+    display: flex;
+    
+    position: sticky;
+    top: 0;
+}
+
+.navbarlogin{
+	width: 100%;
+    text-align: end;
+	display: flex;
+    padding: 1em;
+    font-weight: bold;
+    flex-direction:row-reverse;
+
+
+}
+.hrefnav
+{
+	padding-right: 20px;
+    color: white;
+    text-decoration: none;
+    
+}

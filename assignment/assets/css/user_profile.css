@@ -1,0 +1,19 @@
+form{
+    background-color:#ff5588 ;
+    width: 28%;
+    margin: auto;
+    
+}
+.profile{
+    
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    width:100%;
+}
+.img{
+    margin: auto;
+    width: 10%;
+    border-radius: 40%;
+
+}
